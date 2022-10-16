@@ -1,0 +1,270 @@
+* {
+  font-size: 10px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffff;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(transparent, #005499);
+}
+
+.container {
+  width: 100%;
+}
+
+.top_container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  transition: all 1s;
+  padding-left: 20px;
+  transform: scale(0);
+}
+
+.header-logo.active {
+  transform: scale(1);
+}
+
+.right-side-header {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transform: scale(0);
+  transition: all 0.8s;
+}
+
+.right-side-header.active {
+  transform: scale(1);
+}
+
+.header-menu {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-menu a {
+  color: #fafafa;
+  font-size: 1.8rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.header-menu a:hover {
+  color: #80b7df;
+}
+
+.header-btn {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-btn button {
+  padding: 10px 16px;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+}
+.header-btn button:nth-child(2):hover,
+.header-btn button:nth-child(1) {
+  color: #4a8ab8;
+  background: #fafafa;
+}
+.header-btn button:nth-child(1):hover,
+.header-btn button:nth-child(2) {
+  color: #fafafa;
+  background: #4a8ab8;
+}
+
+.intro-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(90deg, #005499, #01367c);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  top: -10vh;
+  position: absolute;
+}
+
+.loop {
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50vh;
+}
+
+.container.home {
+  height: 600px;
+}
+
+.welcome_text {
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.7s;
+  flex-direction: column;
+}
+.welcome_text .welcome_heading {
+  width: 80%;
+  height: auto;
+  font-weight: bold;
+  color: #fff;
+  font-size: 5rem;
+}
+.welcome_text .join_link {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.welcome_text .join_link button {
+  padding: 10px 20px;
+  margin: 0px 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+}
+.welcome_text .join_link #AboutUS {
+  background: linear-gradient(45deg, #0b3a8c, #b865a5);
+}
+.welcome_text .join_link #ContentUs {
+  background: linear-gradient(45deg, #b865a5, #0b3a8c);
+}
+.welcome_text .join_link #AboutUS:hover,
+.welcome_text .join_link #ContentUs:hover {
+  background: linear-gradient(45deg, #fafafa, #fff);
+  color: #18315e;
+}
+
+.welcome_text.active {
+  transform: scale(1);
+}
+
+.Course-About {
+  width: 35%;
+  height: 50%;
+  position: absolute;
+  display: flex;
+  right: 0px;
+  top: 18%;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.7s;
+  flex-direction: column;
+}
+.Course-About .welcome_heading {
+  width: 80%;
+  height: auto;
+  font-weight: bold;
+  color: #fff;
+  font-size: 4rem;
+}
+.Course-About .welcome_heading span {
+  font-size: 4rem;
+  color: #b865a5;
+}
+.Course-About .join_link {
+  width: 80%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Course-About .join_link button {
+  padding: 10px 20px;
+  margin: 0px 10px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2);
+}
+.Course-About .join_link #SignUp {
+  background: linear-gradient(45deg, #0b3a8c, #b865a5);
+}
+.Course-About .join_link #SignIn {
+  background: linear-gradient(45deg, #b865a5, #0b3a8c);
+}
+.Course-About .join_link #SignUp:hover,
+.Course-About .join_link #SignIn:hover {
+  background: linear-gradient(45deg, #fafafa, #fff);
+  color: #18315e;
+}
+
+.Course-About.active {
+  transform: scale(1);
+}/*# sourceMappingURL=index.css.map */

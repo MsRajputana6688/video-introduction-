@@ -1,0 +1,240 @@
+* {
+    font-size: 10px;
+}
+
+@import "include_file/mixin";
+.container {
+    width: 100%;
+}
+
+.top_container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    // background: #456562;
+    margin: auto;
+    @include flex_box(center, space-between);
+}
+
+.header-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    transition: all 1s;
+    padding-left: 20px;
+    transform: scale(0);
+}
+
+.header-logo.active {
+    transform: scale(1);
+}
+
+.right-side-header {
+    width: 40%;
+    @include flex_box(center, space-around);
+    transform: scale(0);
+    transition: all 0.8s;
+}
+
+.right-side-header.active {
+    transform: scale(1);
+}
+
+.header-menu {
+    width: 50%;
+    @include flex_box(center, space-between);
+    a {
+        color: #fafafa;
+        font-size: 1.8rem;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    }
+    a:hover {
+        color: #80b7df;
+    }
+}
+
+.header-btn {
+    width: 35%;
+    @include flex_box(center, space-between);
+    button {
+        padding: 10px 16px;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.2);
+    }
+    button:nth-child(2):hover,
+    button:nth-child(1) {
+        color: #4a8ab8;
+        background: #fafafa;
+    }
+    button:nth-child(1):hover,
+    button:nth-child(2) {
+        color: #fafafa;
+        background: #4a8ab8;
+    }
+}
+
+.intro-video {
+    @include flex_box(center, center);
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(90deg, #005499, #01367c);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    top: -10vh;
+    position: absolute;
+}
+
+.loop {
+    display: none;
+}
+
+nav {
+    @include flex_box(center, space-between);
+    width: 100%;
+    height: 50vh;
+}
+
+.container.home {
+    height: 600px;
+}
+
+.welcome_text {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.7s;
+    flex-direction: column;
+    .welcome_heading {
+        width: 80%;
+        height: auto;
+        font-weight: bold;
+        color: #fff;
+        font-size: 5rem;
+    }
+    .join_link {
+        width: 80%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        button {
+            padding: 10px 20px;
+            margin: 0px 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border: none;
+            color: #fff;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            transition: all 0.2s linear;
+            box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.2);
+        }
+        #AboutUS {
+            background: linear-gradient(45deg, #0b3a8c, #b865a5);
+        }
+        #ContentUs {
+            background: linear-gradient(45deg, #b865a5, #0b3a8c);
+        }
+        #AboutUS:hover,
+        #ContentUs:hover {
+            background: linear-gradient(45deg, #fafafa, #fff);
+            color: #18315e;
+        }
+    }
+}
+
+.welcome_text.active {
+    transform: scale(1);
+}
+
+.Course-About {
+    width: 35%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    right: 0px;
+    top: 18%;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.7s;
+    flex-direction: column;
+    .welcome_heading {
+        width: 80%;
+        height: auto;
+        font-weight: bold;
+        color: #fff;
+        font-size: 4rem;
+        span {
+            font-size: 4rem;
+            color: #b865a5;
+        }
+    }
+    .join_link {
+        width: 80%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        button {
+            padding: 10px 20px;
+            margin: 0px 10px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            border: none;
+            color: #fff;
+            border-radius: 6px;
+            letter-spacing: 1px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            transition: all 0.2s linear;
+            box-shadow: 0px 0px 16px rgba($color: #000000, $alpha: 0.2);
+        }
+        #SignUp {
+            background: linear-gradient(45deg, #0b3a8c, #b865a5);
+        }
+        #SignIn {
+            background: linear-gradient(45deg, #b865a5, #0b3a8c);
+        }
+        #SignUp:hover,
+        #SignIn:hover {
+            background: linear-gradient(45deg, #fafafa, #fff);
+            // background: linear-gradient(45deg, #0b3a8c, #b865a5);
+            color: #18315e;
+        }
+    }
+}
+
+.Course-About.active {
+    transform: scale(1);
+}
